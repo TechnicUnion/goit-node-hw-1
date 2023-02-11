@@ -20,5 +20,8 @@
   "homepage": "https://github.com/TechnicUnion/goit-node-hw-1#readme",
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.1"
   }
 }
