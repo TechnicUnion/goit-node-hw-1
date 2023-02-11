@@ -6,7 +6,7 @@ const contactsPath = path.resolve('./db/contacts.json')
 
 async function listContacts() {
     const list = await fs.readFile(contactsPath, "utf-8");
-    console.log(JSON.parse(list))
+    console.table(JSON.parse(list))
 }
 
 async function getContactById(contactId) {
