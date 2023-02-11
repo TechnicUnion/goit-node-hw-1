@@ -12,14 +12,14 @@ async function listContacts() {
 async function getContactById(contactId) {
     const list = await fs.readFile(contactsPath, "utf-8");
     const filter = JSON.parse(list).filter(item => item.id === contactId)
-    console.log(filter)
+    console.table(filter)
 }
 
 async function removeContact(contactId) {
     const list = await fs.readFile(contactsPath, "utf-8");
     const filter = JSON.parse(list).filter(item => item.id !== contactId)
     fs.writeFile(contactsPath, JSON.stringify(filter), "utf8")
-    console.log(filter)
+    console.table(filter)
     
 }
 
@@ -36,7 +36,7 @@ async function addContact(name, email, phone) {
 
   
 fs.writeFile(contactsPath, JSON.stringify(list), "utf8")
-     console.log(list)
+     console.table(list)
 }
 
 
