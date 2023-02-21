@@ -35,7 +35,7 @@ async function addContact(name, email, phone) {
     list.push( newContact)
 
   
-fs.writeFile(contactsPath, JSON.stringify(list), "utf8")
+fs.writeFile(contactsPath, JSON.stringify(list, null, 2), "utf8")
      console.table(list)
 }
 
